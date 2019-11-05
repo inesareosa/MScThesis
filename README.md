@@ -35,8 +35,8 @@ following R extra packages, available on
 Tested on R 3.5.2
 
 The benchamark data sets can be downloaded [here](Datasets.zip). The
-full code and resultant plots can be downloaded [here](Performance.zip).
-The full plots of the LSMPAs can be downloaded [here](FishingEffort.zip)
+full code and resultant plots can be downloaded [here](https://drive.google.com/file/d/1JVXOkJ3uy1jD7qNx4G8I89eM0mPnOXOG/view?usp=sharing).
+The full plots of the LSMPAs can be downloaded [here](https://drive.google.com/file/d/1omoqvDHgXNEe-iVimle4xXjfPR7oAbA-/view?usp=sharing)
 
 ### Load Functions and Dataset
 
