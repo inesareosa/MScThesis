@@ -121,6 +121,14 @@ Choose a predictor and calculate the EDP. Here is the example with a
 numeric (“vgain”) and a categorical (“screw”), as well as the bivariate
 EDP for both features:
 
+``` r
+edp(single_error_ds, "vgain", type=err, jitter=FALSE)
+edp(single_error_ds, "screw", type=err, jitter=FALSE)
+
+# Bivariate EDP: Option "All" for the comparative facet to show the overall error distribution
+plot(multiple_edp(single_error_ds, c("vgain", "screw"), type=err, option='All', ncols=3, mode="wrap"))
+```
+
 ![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
 
     ## Using freq as weighting variable
@@ -130,6 +138,11 @@ EDP for both features:
   - **PEP**
 
 Plot for all predictors:
+
+``` r
+pep(single_error_ds, type=err, option="A")
+pep(single_error_ds, type=err, option="B")
+```
 
 ![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-6-2.png)<!-- -->
 
@@ -167,5 +180,12 @@ head(multiple_error_ds, n=10)
 
 Choose a predictor and calculate the MEDP. Here is the example with
 feature “vgain”, as well as the bivariate MEDP for the same feature:
+
+```r
+medp(multiple_error_ds, "vgain", mod_names=c("svm", "randomForest", "nnet","gbm"), type=err)
+
+# Bivariate MEDP: Option 3 for the comparative facet to show the overall error distribution
+plot(biv_medp(multiple_error_ds, c("vgain", "screw"), mod_names=c("svm", "randomForest", "nnet","gbm"), type=err, option=3))
+```
 
 ![](README_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
